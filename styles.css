@@ -391,7 +391,6 @@ nav {
   /* Components of the Website; i.e. sections, containers, etc.. */
   body {
     background-color: rgb(253, 251, 245);
-
   }
 
   .main {
@@ -471,19 +470,6 @@ nav {
 
      }
 
-     /* ANIMATION: Grow & Shrink */
-     @keyframes grow-and-shrink {
-      0% {
-        transform: scale(0.5);
-      }
-      50% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(0.5);
-      }
-    }
-
 
   .content_writeup {
     width: 50%;
@@ -539,6 +525,7 @@ nav {
   }
 
   #footer {
+    position: absolute;
     text-align: center;
     background-color: var(--footer);
     color: var(--ghostwhite);
@@ -573,13 +560,6 @@ nav {
       
       .footer_socials a::before {
       background-color: transparent;
-      /* content: "";
-      inset: 0;
-      position: absolute;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.5s ease-in-out;
-      z-index: -1; */
       }
 
       .footer_socials a:hover::before {
@@ -915,21 +895,12 @@ nav {
       width: 90%;
       font-size: 3.0vw;
     }
-
-  /* 
-    .topnav {
-      display: block;
-    } */
   
     .wrap {
       position: relative;
       max-height: 60vh;
       min-width: 100vw;
     }
-  
-    /* .video {
-      bottom: 0;
-    } */
   
     .menu-wrap {
         display: inline-flex;
@@ -971,111 +942,6 @@ nav {
 }
   }
   
-  /* Subscribe form styles - This has to be deleted - 
-  #open-subscribe-form {
-    width: 8rem;
-    height: 3.5rem;
-    background-color: #E2A002;
-    color: #fff;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 3px;
-  }
-  
-  .subscribe-form {
-    position: fixed;
-    top: -100%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.15);
-    width: calc(100% - 20px);
-    max-width: 650px;
-    background: #fff;
-    border-radius: 10px;
-    display: grid;
-    gap: 10px;
-    padding: 50px 40px 40px;
-    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
-    z-index: 2;
-    opacity: 0;
-    transition: top 0ms ease-in-out 300ms,
-      transform 300ms ease-in-out 0ms,
-      opacity 300ms ease-in-out 0ms;
-  }
-  
-  .subscribe-form.active {
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-    transition: top 0ms ease-in-out 0ms,
-      transform 300ms ease-in-out 0ms,
-      opacity 300ms ease-in-out 0ms;
-  }
-  
-  .subscribe-form .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    background-color: var(--team-color);
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .subscribe-form .left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .subscribe-form .right h2 {
-    font-size: 28px;
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.15;
-    margin-bottom: 10px;
-    color: #111;
-  }
-  
-  .subscribe-form .right p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .subscribe-form .right .form label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 15px;
-  }
-  
-  .subscribe-form .right .form .input {
-    margin-bottom: 10px;
-  }
-  
-  .subscribe-form .right .form input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid rgb(25, 117, 142);
-    font-size: 17px;
-    border-radius: 5px;
-  }
-  
-  .subscribe-form .right .form button {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: var(--brand-color);
-    color: #fff;
-    box-shadow: 0px 2px 2px #ddd;
-  }
-  */
-
   @media(min-width: 680px) {
     .subscribe-form {
       grid-template-columns: repeat(2, 1fr);
