@@ -48,31 +48,25 @@ html {
   'opsz' 48
 }
 
-/* WELCOME PAGE start */
+/* WELCOME PAGE starts */
 
-.video_wrap {
-  position: relative;
+.image_wrap{
+  max-height: 100vh;
+}
+
+.image_wrap>img {
   height: 100vh;
+  width: 100%;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
 }
 
-.video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-height: 100%;
-  min-width: 100%;
-  opacity: .9;
-  z-index: -1;
-}
-
-.video[poster] {
-  object-fit: cover;
-}
 
 .welcome_page {
   position: absolute;
   display: flex;
-  /* padding: 20px; */
+  flex-wrap: wrap;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
@@ -93,11 +87,12 @@ html {
 
 .intro_sub ul {
   display: flex;
+  justify-content: space-between;
   text-align: center;
 }
 
 .intro_sub ul li {
-  margin-right: 40px;
+  padding: 0 20px;
   list-style: none;
   color: var(--ghostwhite);
   font-size: 18px;
@@ -105,25 +100,25 @@ html {
 }
 
 .btn {
-  padding: 10px 30px;
-  margin: 20px 0;
+  padding: 0.625rem 1.875rem;
+  margin: 1.25rem 0;
 }
 
 button {
   cursor: pointer;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   font-size: 1.1rem;
   border: none;
   background: var(--brand-color);
   transition: background .5s;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 0.1875rem;
   font-weight: 100;
 }
 
 .welcome_page>button:hover {
   background-color: var(--opaque-brand-color);
-  box-shadow: 0 10px 20px var(--white) .2;
+  box-shadow: 0 0.625rem 1.25rem var(--white) .2;
 }
 
 .welcome_page>button>a {
@@ -182,15 +177,15 @@ nav {
 .header_nav-list li a {
     text-decoration: none;
     background: none;
-    margin-right: 40px;
+    margin-right: 2.5rem;
     position: relative;
     color: var(--brand-color);
     font-size: 1.2vw;
     list-style: none;
     justify-content: space-around;
     border: 1px double var(--brand-color);
-    padding: 5px;
-    box-shadow: 3px 2px var(--team-color);
+    padding: 0.3125rem;
+    box-shadow: 0.1875rem 0.125rem var(--team-color);
     text-transform: capitalize;
   
 }
@@ -198,7 +193,7 @@ nav {
 .header_nav-list li a:hover {
   transform: none;
   text-decoration: none;
-  margin-right: 40px;
+  margin-right: 2.5rem;
   position: relative;
   color: var(--team-color);
   /* font-weight: 500; */
@@ -233,7 +228,7 @@ nav {
 /* HAMBURGER MENU BAR */
 .menu-wrap {
     position: fixed;
-    top: 20px;
+    top: 1.25rem;
     right: 0;
     z-index: 1;
     display: none;
@@ -241,22 +236,22 @@ nav {
   
   .menu-wrap .toggler {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 1.25rem;
+    right: 1.25rem;
     z-index: 2;
     cursor: pointer;
-    width: 65px; /* ch*/
-    height: 30px; /* ch*/
+    width: 4.0625rem; /* ch*/
+    height: 1.875rem; /* ch*/
     opacity: 0;
   }
   
   .menu-wrap .hamburger {
     position: absolute;
-    top: 15px; /* ch*/
-    right: 20px; /* ch*/
+    top: 0.9375rem; /* ch*/
+    right: 1.25rem; /* ch*/
     z-index: 1;
-    width: 65px;
-    height: 30px;
+    width: 4.0625rem;
+    height: 1.875rem;
     padding: 1rem;
     background: transparent;
     display: flex;
@@ -269,7 +264,7 @@ nav {
     position: relative;
     flex: none;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;
     background: var(--team-color);
     display: flex;
     align-items: center;
@@ -283,15 +278,15 @@ nav {
     content: "";
     position: absolute;
     z-index: 1;
-    top: -10px;
+    top: -0.625rem;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;
     background: inherit;
   }
   
   /* Moves Line Down */
   .menu-wrap .hamburger>div::after {
-    top: 10px;
+    top: 0.625rem;
   }
   
   /* Toggler Animation */
@@ -341,7 +336,7 @@ nav {
   
   .menu-wrap .menu>div {
     background-color: var(--opaque-brand-color);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(0.1875rem);
     border-radius: 50%;
     width: 400vw;
     height: 400vw;
@@ -378,13 +373,14 @@ nav {
     color: white;
     position: relative;
     text-decoration: none;
+    font-size: 2rem;
     transition: color 0.5s ease;
   }
   
   .menu-wrap .menu>div>div>ul>li>a:hover {
     color: var(--brand-color);
     font-weight: 600;
-    padding: 4.8px;
+    padding: 0.3rem;
   }
 
 
@@ -396,7 +392,7 @@ nav {
   .main {
     /* color: rgb(0,0,0); */
     background-color: var(--nav);
-    padding: 20px;
+    padding: 1.25rem;
     margin: auto;
   }
 
@@ -404,12 +400,12 @@ nav {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 10px;
+    padding: 0.625rem;
   }
 
   .content {
     display: block;
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 1.25rem 3.125rem 0.625rem 3.125rem;
     border-radius: 1.25rem;
@@ -420,7 +416,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3.5rem 3.125rem;
+    margin: auto;
+    width: 90%;
+    padding: 3.5rem 2.125rem;
     margin-bottom: 2.5rem;
     font-family: "Indie Flower";
   }
@@ -477,14 +475,14 @@ nav {
   }
 
     .content_top p {
-      font-size: 60px;
-      margin-bottom: 15px;
+      font-size: 3.75rem;
+      margin-bottom: 0.9375rem;
       color: var(--brand-color);
     }
 
         .content_top small {
-          font-size: 16px;
-          line-height: 35px;
+          font-size: 1rem;
+          line-height: 2.1875rem;
           color: rgb(138, 126, 110);
         }
 
@@ -494,22 +492,22 @@ nav {
     top: 13rem;
     left: 0rem;
     color: #000;
-    padding: 20px;
+    padding: 1.25rem;
     z-index: 3;
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
   
 
   section {
-    margin: 30px 0;
+    margin: 1.875rem 0;
   }
 
   article {
-    margin: 30px 0;
+    margin: 1.875rem 0;
   }
 
   .avatar {
-    width: 150px;
+    width: 9.375rem;
     height: inherit;
     border-radius: 50%;
     float: left;
@@ -530,15 +528,15 @@ nav {
     background-color: var(--footer);
     color: var(--ghostwhite);
     width: 100%;
-    margin: 50px 0px 0px;
-    padding: 20px;
+    margin: 3.125rem 0rem 0rem;
+    padding: 1.25rem;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
   }
           /* FOOTER COLUMNS */ 
     .column {
       float: left;
       width: 30%;
-      padding: 10px;
+      padding: 0.625rem;
       margin-left: 1.25rem;
       height: 100%;
       text-align: center;
@@ -553,7 +551,7 @@ nav {
 
     .footer_socials a {
       margin: auto;
-      padding: 5px;
+      padding: 0.3125rem;
       color: var(--ghostwhite);
       font-size: 2vw;
     }
@@ -704,7 +702,7 @@ nav {
   /* BOX SCROLL ANIMATION */
   .box {
     background-color: transparent;
-    margin: 20px auto;
+    margin: 1.25rem auto;
     padding: 0.625rem 0;
     max-width: 100%;
     height: 100%;
@@ -724,13 +722,14 @@ nav {
 
   /* FOR THE SUBSCRIBE BUTTON */
     #open-subscribe-form {
-      width: 9.375rem;
+      width: 10rem;
       height: 3.125rem;
       background-color: #E2A002;
       color: #fff;
       font-size: 1.25rem;
       border: none;
       border-radius: 0.1875rem;
+      letter-spacing: normal;
     }
 
         #open-subscribe-form:hover {
@@ -832,12 +831,174 @@ nav {
       box-shadow: 0rem 0.125rem 0.125rem #ddd;
     }
 
-        @media(max-width: 42.5rem) {
-          
+        /* "Back to top of the page" button*/
+    
+        #myBtn {
+          display: none;
+          /* Hidden by default */
+          position: fixed;
+          bottom: 0.625rem;
+          right: 0.625rem;
+          z-index: 99;
+          border: none;
+          outline: none;
+          background-color: rgb(226, 160, 2);
+          cursor: pointer;
+          padding: 0.2rem;
+          border-radius: 0.625rem;
+        }
+    
+        #top {
+          filter: contrast(4);
+          width: 80%;
+        }
+    
+        /* Signup and login forms styles */
+        /* .fig{
+      } */
+        .members-section {
+          margin: 20rem 5rem 10rem 5rem;
+        }
+    
+        .members-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          font-size: 18px;
+        }
+    
+        .members-buttons {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+    
+        .members-heading {
+          color: #0b5360;
+        }
+    
+        .members-buttons>h3 {
+          color: var(--beige);
+        }
+    
+        .members-img {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
         }
 
+
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 0.9375rem;
+      margin: 0.3125rem 0 1.375rem 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+  
+    /* Add a background color when the inputs get focus */
+    input[type=text]:focus,
+    input[type=password]:focus {
+      background-color: rgb(223, 237, 236);
+      outline: none;
+    }
+  
+    /* Set a style for all buttons */
+    .form-btn,
+    .signup-btn {
+      background-color: rgb(0, 112, 121);
+      color: white;
+      padding: 0.875rem 1.25rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 0.3125rem;
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  
+    button:hover {
+      opacity: 0.8;
+    }
+  
+  
+  
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      padding: 0.875rem 1.25rem;
+      background-color: var(--team-color);
+      border-style: none;
+      border-radius: 0.3125rem;
+    }
+  
+  
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn,
+    .signup-btn {
+      float: left;
+      width: 48%;
+      margin: 0.125rem;
+    }
+  
+    /* Add padding to container elements */
+    .form-container {
+      padding: 1rem;
+    }
+  
+  
+    /* Modal Content/Box */
+    .modal-content {
+      margin: 7% auto 15% auto;
+      /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 60%;
+      /* Could be more or less, depending on screen size */
+      background-color: #fff;
+      border-radius: 0.625rem;
+      box-shadow: 0rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.05);
+  
+    }
+
+        .login-modal .modal-content:last-of-type {
+          margin: 15% auto 15% auto;
+        }
+  
+  
+  
+    /* Style the horizontal ruler */
+    /* hr {
+      border: 1px solid #0b5360;
+      margin-bottom: 25px;
+    } */
+  
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 3.125rem;
+      top: 3.125rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #f9f7f5;
+    }
+  
+    .close:hover,
+    .close:focus {
+      color: var(--team-color);
+      cursor: pointer;
+    }
+  
+    /* Clear floats */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
   /* MEDIA QUERIES */
-@media (max-width:37.5rem) {
+@media (max-width:680px) {
 
     html {
       font-size: 2.5vw;
@@ -901,6 +1062,10 @@ nav {
       max-height: 60vh;
       min-width: 100vw;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1789b38bf1f67bff28afe2a0aa418cb4347e6d38
   
     .menu-wrap {
         display: inline-flex;
@@ -925,21 +1090,19 @@ nav {
   padding: 0 0.625rem;
   text-align: center;
 }
-/* 
-.column {
-  width: 25%;
-} */
 
 #open-subscribe-form {
   width: 5rem;
   height: 1.875rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
+letter-spacing: normal;
 }
 
 .subscribe-form {
   grid-template-columns: repeat(1, 1fr);
  
 }
+<<<<<<< HEAD
   }
   
   @media(min-width: 680px) {
@@ -983,127 +1146,30 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+=======
+  
+.subscribe-form {
+  grid-template-columns: repeat(2, 1fr);
+  width: calc(100% - 1.25rem);
+  max-width: 30rem;
+>>>>>>> 1789b38bf1f67bff28afe2a0aa418cb4347e6d38
 }
-
 .members-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
+  margin-bottom: 5rem;
 }
 
-.members-heading {
-  color:#0b5360;
-}
+    .modal-content {
+      margin: 15% auto 15% auto;
+    }
 
-.members-buttons > h3 {
-  color: var(--beige);
-}
-
-.members-img{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-  
-  /* Full-width input fields */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  /* Add a background color when the inputs get focus */
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: rgb(223, 237, 236);
-    outline: none;
-  }
-  
-  /* Set a style for all buttons */
-  .form-btn, .signup-btn {
-    background-color: rgb(0, 112, 121);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0.9;
-  }
-  
-  button:hover {
-    opacity: 0.8;
+  .login-modal .modal-content:last-of-type {
+     margin: 40% auto 15% auto;
   }
 
+
+}
   
-  
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    padding: 14px 20px;
-    background-color: var(--team-color);
-    border-style: none;
-    border-radius: 5px;
-  }
-  
-  
-  /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signup-btn {
-    float: left;
-    width: 48%;
-    margin: 2px;
-  }
-  
-  /* Add padding to container elements */
-  .form-container {
-    padding: 16px;
-  }
-  
-  
-  /* Modal Content/Box */
-  .modal-content {
-    margin: 5% auto 15% auto;
-    /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 60%;
-    /* Could be more or less, depending on screen size */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
-  
-  }
-  
-  /* Style the horizontal ruler */
-  /* hr {
-    border: 1px solid #0b5360;
-    margin-bottom: 25px;
-  } */
-  
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 50px;
-    top: 50px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f9f7f5;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: var(--team-color);
-    cursor: pointer;
-  }
-  
-  /* Clear floats */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  /* Change styles for cancel button and signup button on extra small screens */
+/* Change styles for cancel button and signup button on extra small screens */
   @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
       width: 100%;
@@ -1112,7 +1178,7 @@ nav {
   
   span.psw {
     float: right;
-    padding-top: 16px;
+    padding-top: 1rem;
   }
   
   /* Change styles for span and cancel button on extra small screens */
@@ -1144,5 +1210,6 @@ nav {
     overflow: auto;
     /* Enable scroll if needed */
     background-color: rgba(3, 104, 125);
-    padding-top: 50px;
+    padding-top: 3.125rem;
   }
+
