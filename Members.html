@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" href="./assets/images/favicon.svg">
 
     <!-- CSS LINKE GOES HERE -->
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -28,7 +28,7 @@
    <header>
     <nav>
     <div class="header_logo">
-        <img src="assets/videos/images/naranja-logo.svg" alt="">
+        <img src="assets/images/logo-naranja-150x50.svg" alt="">
     </div>
             <ul class="header_nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -47,10 +47,10 @@
                 <div>
                     <div>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Members</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="home.html">About</a></li>
+                            <li><a href="Members.html">Members</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,23 +59,32 @@
     </header>   
 
     
-        <section class="members-section">
+      <section class="members-section">
 
-          <div class="members-container">
+        <div class="members-container">
         <div class="members-buttons">  
             <h2 class="members-heading">Let's connect!</h2>
             <h4>Would you like to become a member of our community.</h4>
             <br>
+               
+<h4>By registering as a member of our team:</h4>
+<ul>
+<li>You will receive our quarterly magazine "Naranja".</li>
+<li>You will be informed about our programs as well as about the excursions and speeches we organize.</li>
+<li>You will be informed about our voluntary actions.</li>
+</ul>
+<br>
             <h4>Wait no more! Sign up now!</h4>
             <br>
+     
+        
           
              <!-- Signup and Login Buttons -->
             
             <button class="form-btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
           <br>
-            <h4>Do you already have an account? Login now. </h4>
-            <button class="form-btn" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
-        </div>
+            <h4>Do you already have an account? <a  onclick="document.getElementById('id02').style.display='block'" style="width:auto; color: rgb(0, 112, 121);">Login</a></h4>
+          </div>
         
         <div class="members-img">
           <img src="./assets/images/member-313.png">
@@ -106,7 +115,7 @@
                     <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
                   </label>
                   <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="button" class="cancelbtn" onclick="window.location.href = 'Members.html';">Cancel</button>
                     <button id="signup" class="signup-btn">Sign Up</button>
                   </div>
                 </div>
@@ -129,7 +138,7 @@
                 
                 
                       <div class="clearfix">
-                        <button id="login" type="button" class="form-btn">Login</button>
+                        <button id="login" type="button" onclick="alert('Welcome to your account!')" class="form-btn">Login</button>
                        
                       </div>
                     </div>
@@ -145,75 +154,75 @@
             <footer>
 
               <section id="footer">
-                  <div class="row">
-                      <div class="column">
-                        <h3 id="contact">Contact</h3>
-                        <p>47a Gowthorpe<br>
-                          Selby<br>
-                          North Yorkshire<br>
-                          YO8 4HF<br>
-                          United Kingdom<br>
-                          
-                          01757 293020  </p>
-                      </div>
-                      <div class="column">
-                        <h3>Follow us:</h2>
-                          <div class="footer-social-links">
-                              <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fa fa-facebook" style="font-size:18px; color:white"></i></a>
-                              <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa fa-instagram" style="font-size:18px;color:white"></i></a>
-                              <a href="https://github.com/Stellabam/team-orange-CFG" title="Github" target="_blank"><i class="fa fa-github" style="font-size:18px;color:white"></i></a>
-                              <!--ignore these social icons 
-                              <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-                              <a href="#" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a>
-                              -->
+                <div class="row">
+                    <div class="column">
+                      <h3 id="contact">Contact</h3>
+                      <p>47a Gowthorpe<br>
+                        Selby<br>
+                        North Yorkshire<br>
+                        YO8 4HF<br>
+                        United Kingdom<br>
+                        
+                        01757 293020  </p>
+                    </div>
+                    <div class="column">
+                      <h3>Follow us:</h2><br>
+                        <div class="footer_socials">
+    
+                            <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://github.com/Stellabam/team-orange-CFG" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+       <!-- Ignore these social icons 
+                            <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a>-->
+    
+                        </div>
+                    </div>
+                    <div class="column">
+    
+                            <button id="open-subscribe-form">
+                                Subscribe
+                            </button>
+                    
+                      <p>Subscribe to our newsletter!</p>
+    
+                 
+                      <div class="subscribe-form">
+                        <div class="left">
+                          <img src="./assets/images/recycle.gif" alt="" width="80%">
+                        </div>
+                        <div class="right">
+                          <h2>Subscribe to our newsletter!</h2>
+                                  <p>Please subscribe to learn more about our news and activities.</p>
+                         
+                          <div class="form">
+                            <div class="input">
+                              <label for="email">Your Email</label>
+                              <input type="email" id="email" placeholder="john@gmail.com">
                             </div>
-                      </div>
-<div class="column">
-
-              
-                        <button id="open-subscribe-form">
-                            Subscribe
+                            <div class="button">
+                              <button id="show-message">Subscribe</button>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="close-btn">
+                          &times;
                         </button>
-                  <!-- <h3>Subscribe</h3> -->
-                  <p>Subscribe to our newsletter!</p>
-
-             
-                  <div class="subscribe-form">
-                    <div class="left">
-                      <img src="./assets/images/recycle.gif" alt="" width="80%">
-                    </div>
-                    <div class="right">
-                      <h2>Subscribe to our newsletter!</h2>
-                              <p>Please subscribe to learn more about our news and activities.</p>
-                     
-                      <div class="form">
-                        <div class="input">
-                          <label for="email">Your Email</label>
-                          <input type="email" id="email" placeholder="john@gmail.com">
-                        </div>
-                        <div class="button">
-                          <button id="show-message">Subscribe</button>
-                        </div>
                       </div>
+                      <div>
+                       
+                      </div>
+    
+                   
+    
                     </div>
-                    <button class="close-btn">
-                      &times;
-                    </button>
-                  </div>
-                  <div>
-         
-                  </div>
-
-                </div>
-   
-                   <p class="fix">Made with ❤️ by Team Orange for CFG Web Dev MOOC Challenge.</p>
-              </section>
+                    
+                    <p class="fix">Made with ❤️ by Team Orange for CFG Web Dev MOOC Challenge.</p>
+            </section>
           
           </footer>
 
-      
-        
-        
+    
    
 
     <!-- JAVASCRIPT -->
